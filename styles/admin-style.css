@@ -1,0 +1,41 @@
+.enter{
+	text-align: center;
+	margin: 10px 600px;
+	background-color: #BBB;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.enter input{
+	margin: 0 auto;
+	height: 30px;
+	width: 200px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.enter p{
+	color: #333;
+}
+
+.content{
+	margin: 10px auto;
+	background-color: #BBB;
+	padding: 10px;
+	border-radius: 10px;
+}
+.content h1{
+	font: 36px bold;
+	font-family : Arial;
+	color: #333;
+}
+.content a{
+	font: 24px bold;
+	font-family : Arial;
+	color: #333;
+}
+
+.content a:hover{
+	color: white;
+}
