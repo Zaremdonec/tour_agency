@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.clear{
+	clear:both;
+}
+
+body{
+	background-image: url(../images/backdround.jpg);
+	background-size: 100%;
+}
+
+.main_wraper{
+	width: 1000px;
+	margin: 0px auto;
+}
+
+.logo {
+	margin-top: 20px;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	padding-top: 10px; 
+	background-color: rgba(0,153,204,0.8);
+	border-radius: 8px;
+}
+
+.logo span{
+	display: block;
+	text-align: center;
+	font: 36px bold;
+	color: white;
+	font-family: Arial;
+}	
+
+.logo p{
+	text-align: center;
+	font: 11px bold;
+	color: white;
+	font-family: Arial;
+}
+
+.menu{
+	width: 100%;
+	float: left;
+	border-radius: 8px 8px 0 0;
+	background-color: #0099cc;
+}
+
+.menu ul{
+	display: block;
+	float: left;
+	list-style: none;
+	padding: 0px;
+}
+
+.menu ul li{
+	float: left;
+	display: inline;
+	padding: 15px;
+	color: #fada2a;
+	font-size: 14px;
+	height: 22px;
+}
+
+
+.menu ul li a{
+	text-decoration: none;
+	color: white; 
+	font: 18px bold;
+	font-family : Arial;
+    
+}
+
+.menu ul li:hover{
+	background-color:#4682B4;
+}
+
+.contact{
+	float: right;
+	padding: 10px;
+	color: white;
+	font: 14px bold;
+	font-family : Arial;
+}
+
+.sity_filter{
+	background-color: white;
+	border-radius: 0 0 8px 8px;
+	padding: 5px 10px;
+}
+
+.sity_filter ul{
+	list-style: none;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.sity_filter ul li{
+	display: inline;
+	padding: 15px;
+	color: #fada2a;
+	font-size: 14px;
+	height: 22px;
+	background-color: rgba(0,153,204,0.2);
+}
+
+.sity_filter ul li a{
+	text-decoration: none;
+	font: 14px bold;
+	font-family : Arial black;
+	
+}
+
+.sity_filter ul li:hover{
+	background-color: rgba(0,153,204,1);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+		<div class="header">
+			<div class="logo">
+				<span>Туристичне агенство "Оленка"</span>
+				<p>Відпочинок на побережжі азовського моря</p>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#">Головна</a></li>
+					<li><a href="#">Транспорт</a></li>
+					<li><a href="#">Бронювання</a></li>
+					<li><a href="#">Контакти</a></li>
+					<li><a href="#">Про агенство</a></li>
+					<li><a href="#">Відгуки</a></li>
+				</ul>
+				<div class="contact">
+					<p>8 (096) 535 21 45</p>
+
+					<p>t.a.olenka@mail.ua</p>
+				</div>	
+			</div>
+			<div class="clear"></div>
+			<div class="sity_filter">
+				Екскурсії
+				<ul>
+					<li><a href="#">Крим</a></li>
+					<li><a href="#">Херсон</a></li>
+					<li><a href="#">Одеса</a></li>
+				</ul>
+			</div>
+		</div>
+</body>
+</html>
