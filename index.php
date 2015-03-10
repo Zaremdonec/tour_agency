@@ -10,7 +10,6 @@
 		<?php 
 			include("templates/header.php");
 		?>
-		
 	</div>
 </body>
 </html>
