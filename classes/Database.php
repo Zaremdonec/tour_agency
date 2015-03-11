@@ -6,14 +6,12 @@
  * Time: 10:47
  */
 
-namespace classes;
-
 class Database {
     protected static $_instance;
     private $_host = "localhost";
     private $_username = "root";
     private $_password = "";
-    private $_database = "blog_db";
+    private $_database = "gdk_touragency";
     private $_connection;
 
     static public function getInstance()
