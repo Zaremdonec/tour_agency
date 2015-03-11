@@ -5,7 +5,7 @@
 <body>
 		<div class="header">
 			<div class="logo">
-				<span>Туристичне агенство "Оленка"</span>
+				<span>Туристичне агенство "Павлуша"</span>
 				<p>Відпочинок на побережжі азовського моря</p>
 			</div>
 			<div class="menu">

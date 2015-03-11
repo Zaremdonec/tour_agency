@@ -10,7 +10,92 @@
 		<?php 
 			include("templates/header.php");
 		?>
-		
+		<div class="content">
+			<div class="tour">
+				<div class="image">
+					<img src="../images/backdround.jpg">
+				</div>
+				<div class="title">
+					<a href="#"><h2>Заголовок</h2></a>
+				</div>
+				<div class="text">
+					<p>Опис туру</p>
+				</div>
+				<div class="information">
+					<a href="#">Детальніше</a>
+				</div>
+			</div>
+			<div class="tour">
+				<div class="image">
+					<img src="../images/backdround.jpg">
+				</div>
+				<div class="title">
+					<a href="#"><h2>Заголовок</h2></a>
+				</div>
+				<div class="text">
+					<p>Опис туру</p>
+				</div>
+				<div class="information">
+					<a href="#">Детальніше</a>
+				</div>
+			</div>
+			<div class="tour">
+				<div class="image">
+					<img src="../images/backdround.jpg">
+				</div>
+				<div class="title">
+					<a href="#"><h2>Заголовок</h2></a>
+				</div>
+				<div class="text">
+					<p>Опис туру</p>
+				</div>
+				<div class="information">
+					<a href="#">Детальніше</a>
+				</div>
+			</div>
+			<div class="tour">
+				<div class="image">
+					<img src="../images/backdround.jpg">
+				</div>
+				<div class="title">
+					<a href="#"><h2>Заголовок</h2></a>
+				</div>
+				<div class="text">
+					<p>Опис туру</p>
+				</div>
+				<div class="information">
+					<a href="#">Детальніше</a>
+				</div>
+			</div>
+			<div class="tour">
+				<div class="image">
+					<img src="../images/backdround.jpg">
+				</div>
+				<div class="title">
+					<a href="#"><h2>Заголовок</h2></a>
+				</div>
+				<div class="text">
+					<p>Опис туру</p>
+				</div>
+				<div class="information">
+					<a href="#">Детальніше</a>
+				</div>
+			</div>
+			<div class="tour">
+				<div class="image">
+					<img src="../images/backdround.jpg">
+				</div>
+				<div class="title">
+					<a href="#"><h2>Заголовок</h2></a>
+				</div>
+				<div class="text">
+					<p>Опис туру</p>
+				</div>
+				<div class="information">
+					<a href="#">Детальніше</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
