@@ -8,9 +8,8 @@
 }
 
 body{
-	background-image: url(../images/backdround.jpg);
+	background: url(../images/backdround.jpg) fixed;
 	background-size: 100%;
-	background-attachment:fixed;
 }
 
 .main_wraper{
