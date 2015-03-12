@@ -1,0 +1,100 @@
+
+DROP DATABASE IF EXISTS `gdk_touragency`;
+CREATE DATABASE `gdk_touragency`;
+USE `gdk_touragency`;
+
+-- ---
+-- Globals
+-- ---
+
+-- SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+-- SET FOREIGN_KEY_CHECKS=0;
+
+-- ---
+-- Table 'tours'
+--
+-- ---
+
+DROP TABLE IF EXISTS `tours`;
+
+CREATE TABLE `tours` (
+  `id` INT NULL AUTO_INCREMENT DEFAULT NULL,
+  `picture_id` INT(11) NULL DEFAULT NULL,
+  `category_id` INT(11) NULL DEFAULT NULL,
+  `title` VARCHAR(64) NOT NULL DEFAULT 'NULL',
+  `descr` TEXT NULL DEFAULT NULL,
+  `date` DATE NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'comments'
+--
+-- ---
+
+DROP TABLE IF EXISTS `comments`;
+
+CREATE TABLE `comments` (
+  `id` INT NULL AUTO_INCREMENT DEFAULT NULL,
+  `tour_id` INT NULL DEFAULT NULL,
+  `text` TEXT NULL DEFAULT NULL,
+  `author` VARCHAR(32) NULL DEFAULT NULL,
+  `datetime` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'pictures'
+--
+-- ---
+
+DROP TABLE IF EXISTS `pictures`;
+
+CREATE TABLE `pictures` (
+  `id` INT NULL AUTO_INCREMENT DEFAULT NULL,
+  `path` VARCHAR(256) NOT NULL DEFAULT 'NULL',
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'categories'
+--
+-- ---
+
+DROP TABLE IF EXISTS `categories`;
+
+CREATE TABLE `categories` (
+  `id` INT NULL AUTO_INCREMENT DEFAULT NULL,
+  `name` VARCHAR(128) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Foreign Keys
+-- ---
+
+ALTER TABLE `tours` ADD FOREIGN KEY (picture_id) REFERENCES `pictures` (`id`);
+ALTER TABLE `tours` ADD FOREIGN KEY (category_id) REFERENCES `categories` (`id`);
+ALTER TABLE `comments` ADD FOREIGN KEY (tour_id) REFERENCES `tours` (`id`);
+
+-- ---
+-- Table Properties
+-- ---
+
+ALTER TABLE `tours` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+ALTER TABLE `comments` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+ALTER TABLE `pictures` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+ALTER TABLE `categories` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ---
+-- Test Data
+-- ---
+
+-- INSERT INTO `tours` (`id`,`picture_id`,`category_id`,`title`,`descr`,`date`) VALUES
+-- ('','','','','','');
+-- INSERT INTO `comments` (`id`,`tour_id`,`text`,`author`,`datetime`) VALUES
+-- ('','','','','');
+-- INSERT INTO `pictures` (`id`,`path`) VALUES
+-- ('','');
+-- INSERT INTO `categories` (`id`,`name`) VALUES
+-- ('','');
