@@ -126,6 +126,7 @@ body{
 	margin-bottom: 10px;
 	border-radius:10px;
 	margin-right: 66.66px;
+    box-shadow: 1px 6px 3px 0px #888;
 }
 
 .tour:nth-of-type(4n){
