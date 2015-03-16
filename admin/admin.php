@@ -9,7 +9,6 @@
 	<div class="main_wraper">
 		<div class="content">	
 				<a href="create.php">Додавання екскурсій</a><br>
-				<a href="delete.php">Видалення екскурсій</a><br>
 				<a href="edit.php">Редагування екскурсій</a><br>
 		</div>
 	</div>
