@@ -20,7 +20,7 @@
 				<div class="contact">
 					<p>8 (096) 535 21 45</p>
 
-					<p>t.a.olenka@mail.ua</p>
+					<p>t.a.pawlusha@mail.ua</p>
 				</div>	
 			</div>
 			<div class="clear"></div>

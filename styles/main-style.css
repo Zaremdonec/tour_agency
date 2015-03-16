@@ -190,3 +190,48 @@ body{
 	font-family : Arial;
 	padding: 11px 55px 13px;
 }
+
+.tour_item{
+	float: left;
+	width: 65%;
+	margin-top: 20px;
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.tour_item p{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+.text p{
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+}
+
+.news{
+	width: 27%;
+	float: right;
+	margin-top: 20px;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	
+}
+
+.news h2{
+	border-bottom: 2px solid #0099cc;
+}
+
+.news p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.article{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
