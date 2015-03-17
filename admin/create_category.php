@@ -14,7 +14,7 @@
 	        	</form>
 	        	<?php
 	        	include("../classes/Database.php");
-	        	$db = new Database();
+	        	$db = Database::getInstance();
 			    	if(isset($_POST['create_category'])){
 			    		$db->query("INSERT INTO categories(name) VALUES ('".$_POST['name_category']."')");
 			    	}
