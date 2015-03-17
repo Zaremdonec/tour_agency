@@ -53,12 +53,12 @@ body {
 	float: left;
 	list-style: none;
 	padding: 0px;
+	margin-top: 16px;
 }
 
 .menu ul li {
 	float: left;
 	display: inline;
-	padding: 15px;
 	color: #fada2a;
 	font-size: 14px;
 	height: 22px;
@@ -69,9 +69,10 @@ body {
 	color: white; 
 	font: 18px bold;
 	font-family : Arial;
+	padding: 15px;
 }
 
-.menu ul li:hover {
+.menu ul li a:hover {
 	background-color:#4682B4;
 }
 
