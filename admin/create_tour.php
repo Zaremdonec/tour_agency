@@ -1,3 +1,7 @@
+<?php
+	include("../classes/Excursion.php");
+	$excursion = new Excursion();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,31 +17,31 @@
 				<p>Завантаження картинки</p>
 				<form method="post" enctype="multipart/form-data">
 	        		<input type="file" name="fileToUpload" id="fileToUpload"/>
-	        		<input type="submit" name="loadImage" value="Upload Image"/>
 	        		<br><br>
 					<input type="text" name="title" placeholder="Заголовок статі">
-					<input type="text" name="cagegories" placeholder="Місто">
+					<select name="category" plaseholder="Місто">
+					<?php
+						$excursion->getCategory();
+					?>
+					  </select>
 					<p>Опис статі</p>
 	        		<textarea name="editor" id="editor1"></textarea>
 	        		<script type="text/javascript">
 					CKEDITOR.replace( 'editor1');
 					</script>
+					<p>Дата екскурсії</p>
+					<input name="date" placeholder="Дата екскурсії" />
 					<br><br>
 					<input type="submit" name="createPost" value="Опублікувати статю"/><br>
-					<a href = "admin.php">Назад</a>
+					<a href = "control_panel.php">Назад</a>
+					
+            
+        
     			</form>
-			    <?php
-			    	if(isset($_POST['loadImage'])){
-			    	echo $db->showImage($_FILES["fileToUpload"]["name"]);
-			    	$_SESSION['image'] = $_FILES["fileToUpload"]["name"];
-			    	} 
-			    	if(isset($_POST['createPost'])){
-			    		if(!empty($_POST['title']) && !empty($_POST['editor']) && !empty($_SESSION['image']))
-			    			$db->addPost($_POST['title'],$_POST['editor'],$_SESSION['image']);
-			    		else echo "Заповніть всі поля";
-			    		}
-			    	 
-			    ?>
+    			<?php 
+
+    			?>
+			    
 			</div>
 	</div>
 </body>
