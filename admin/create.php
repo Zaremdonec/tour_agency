@@ -15,15 +15,15 @@
 	        		<input type="file" name="fileToUpload" id="fileToUpload"/>
 	        		<input type="submit" name="loadImage" value="Upload Image"/>
 	        		<br><br>
-					<input type="text" name="title" placeholder="Заголовок статьї">
-
+					<input type="text" name="title" placeholder="Заголовок статі">
+					<input type="text" name="cagegories" placeholder="Місто">
 					<p>Опис статі</p>
 	        		<textarea name="editor" id="editor1"></textarea>
 	        		<script type="text/javascript">
 					CKEDITOR.replace( 'editor1');
 					</script>
 					<br><br>
-					<input type="submit" name="createPost" value="Опублікувати статью"/><br>
+					<input type="submit" name="createPost" value="Опублікувати статю"/><br>
 					<a href = "admin.php">Назад</a>
     			</form>
 			    <?php
