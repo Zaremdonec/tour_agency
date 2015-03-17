@@ -1,11 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Vitaly
- * Date: 11.03.15
- * Time: 10:47
+ * Using
+ * $db = Database::getInstance();
+ * $command = "command text";
+ * $result = $db->query($command);
  */
-
 class Database {
     protected static $_instance;
     private $_host = "localhost";
