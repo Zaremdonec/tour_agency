@@ -22,7 +22,7 @@ class Database {
         return self::$_instance;
     }
 
-    private function __construct()
+    public function __construct()
     {
         $this->_connection = new \mysqli($this->_host, $this->_username,
             $this->_password, $this->_database) or die("Database connection error");
@@ -39,4 +39,6 @@ class Database {
     {
         return $this->getConnection()->query($command);
     }
+
+    
 }
