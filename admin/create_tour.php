@@ -29,10 +29,18 @@
 	        		<script type="text/javascript">
 					CKEDITOR.replace( 'editor1');
 					</script>
+					<p>Дата екскурсії</p>
+					<input name="date" placeholder="Дата екскурсії" />
 					<br><br>
 					<input type="submit" name="createPost" value="Опублікувати статю"/><br>
 					<a href = "control_panel.php">Назад</a>
+					
+            
+        
     			</form>
+    			<?php 
+
+    			?>
 			    
 			</div>
 	</div>

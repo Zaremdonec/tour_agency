@@ -9,6 +9,11 @@ class Excursion
 		$this->db = Database::getInstance();
 	}
 
+	public function createCategory($name){
+		$command = "INSERT INTO `categories`(name) VALUES ('".$name."')";
+		$this->db->query($command);
+	}
+
 	public function printCategory()
 	{
 		$command = "SELECT `name` FROM `categories`";
@@ -25,6 +30,10 @@ class Excursion
 		while ($row = mysqli_fetch_array($queryResult)) {
 			echo "<option value=".$row['id'].">". $row['name'] ."</option>";
 		}
+	}
+
+	public function addTour($image,$title,$category,$desc,$date){
+
 	}
 
 
