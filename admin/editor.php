@@ -14,7 +14,6 @@
 				<img src="../images/backdround.jpg" width="300" height="300">
 				<form method="post" enctype="multipart/form-data">
 	        		<input type="file" name="fileToUpload" id="fileToUpload"/>
-	        		<input type="submit" name="loadImage" value="Upload Image"/>
 	        		<br><br>
 					<input type="text" name="title" placeholder="Заголовок статї">
 					<br><br>
@@ -24,20 +23,9 @@
 					</script>
 					<br><br>
 					<input type="submit" name="createPost" value="Оновити статю"/><br>
-					<a href = "admin.php">Назад</a>
+					<a href = "edit.php">Назад</a>
     			</form>
-			    <?php
-			    	if(isset($_POST['loadImage'])){
-			    	echo $db->showImage($_FILES["fileToUpload"]["name"]);
-			    	$_SESSION['image'] = $_FILES["fileToUpload"]["name"];
-			    	} 
-			    	if(isset($_POST['createPost'])){
-			    		if(!empty($_POST['title']) && !empty($_POST['editor']) && !empty($_SESSION['image']))
-			    			$db->addPost($_POST['title'],$_POST['editor'],$_SESSION['image']);
-			    		else echo "Заповніть всі поля";
-			    		}
-			    	 
-			    ?>
+			   
 			</div>
 	</div>
 </body>

@@ -13,12 +13,13 @@
 	        		<input type="submit" name="create_category" value="Create category"/>
 	        	</form>
 	        	<?php
-	        	include("../classes/Database.php");
-	        	$db = new Database();
+	        	include("../classes/Excursion.php");
+	        	$excursion = new Excursion();
 			    	if(isset($_POST['create_category'])){
-			    		$db->query("INSERT INTO categories(name) VALUES ('".$_POST['name_category']."')");
+			    		$excursion->createCategory($_POST['name_category']);
 			    	}
 			    ?>
+			    <a href = "control_panel.php">Назад</a>
 		</div>
 	</div>
 </body>

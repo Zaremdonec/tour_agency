@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+	include("classes/Excursion.php");
+	$excursion = new Excursion();
+?>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Туристичне агенство "Павлуша"</title>
@@ -8,6 +12,14 @@
 <body>
 	<div class="main_wraper">
 		<?php include("templates/header.php"); ?>
+		<div class="sity_filter">
+		Екскурсії
+		<ul>
+			<?php
+				$excursion->printCategory();
+			?>
+		</ul>
+	</div>
 		<div class="content">
 			<div class="tour">
 				<div class="image">
