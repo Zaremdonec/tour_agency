@@ -30,7 +30,7 @@
 	        		<a href="editor.php">Редагувати</a>
 	        		<a href="">Видалити</a> 
 	        		</div>
-					<a href = "admin.php">Назад</a>
+					<a href = "control_panel.php">Назад</a>
 			</div>
 	</div>
 </body>

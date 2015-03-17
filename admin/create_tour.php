@@ -31,7 +31,7 @@
 					</script>
 					<br><br>
 					<input type="submit" name="createPost" value="Опублікувати статю"/><br>
-					<a href = "admin.php">Назад</a>
+					<a href = "control_panel.php">Назад</a>
     			</form>
 			    
 			</div>

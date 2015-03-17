@@ -19,6 +19,7 @@
 			    		$db->query("INSERT INTO categories(name) VALUES ('".$_POST['name_category']."')");
 			    	}
 			    ?>
+			    <a href = "control_panel.php">Назад</a>
 		</div>
 	</div>
 </body>
