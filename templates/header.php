@@ -1,7 +1,3 @@
-<?php
-	include("classes/Excursion.php");
-	$excursion = new Excursion();
-?>
 <div class="header">
 	<div class="logo">
 		<span>Туристичне агенство "Павлуша"</span>
@@ -23,12 +19,5 @@
 		</div>	
 	</div>
 	<div class="clear"></div>
-	<div class="sity_filter">
-		Екскурсії
-		<ul>
-			<?php
-				$excursion->printCategory();
-			?>
-		</ul>
-	</div>
+	
 </div>
