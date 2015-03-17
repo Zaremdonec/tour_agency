@@ -16,7 +16,13 @@
 	        		<input type="submit" name="loadImage" value="Upload Image"/>
 	        		<br><br>
 					<input type="text" name="title" placeholder="Заголовок статі">
-					<input type="text" name="cagegories" placeholder="Місто">
+					<select id="unittype" name="unittype">
+					    <option value="1"> Miner </option>
+					    <option value="2"> Puffer </option>
+					    <option value="3" selected> Snipey </option>
+					    <option value="4"> Max </option>
+					    <option value="5"> Firebot </option>
+					 </select>
 					<p>Опис статі</p>
 	        		<textarea name="editor" id="editor1"></textarea>
 	        		<script type="text/javascript">

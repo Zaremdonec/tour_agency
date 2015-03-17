@@ -1,3 +1,7 @@
+<?php
+	include("../classes/Excursion.php");
+	$excursion = new Excursion();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +20,11 @@
 	        		<input type="submit" name="loadImage" value="Upload Image"/>
 	        		<br><br>
 					<input type="text" name="title" placeholder="Заголовок статі">
-					<input type="text" name="cagegories" placeholder="Місто">
+					<select name="category" plaseholder="Місто">
+					<?php
+						$excursion->getCategory();
+					?>
+					  </select>
 					<p>Опис статі</p>
 	        		<textarea name="editor" id="editor1"></textarea>
 	        		<script type="text/javascript">

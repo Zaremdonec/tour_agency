@@ -16,14 +16,15 @@ class Database {
     static public function getInstance()
     {
         if(self::$_instance === null) {
-            self::$_instance = new self();
+            self::$_instance = new Database();
         }
+
         return self::$_instance;
     }
 
-    public function __construct()
+    private function __construct()
     {
-        $this->_connection = new \mysqli($this->_host, $this->_username,
+        $this->_connection = new mysqli($this->_host, $this->_username,
             $this->_password, $this->_database) or die("Database connection error");
     }
 
