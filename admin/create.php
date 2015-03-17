@@ -9,7 +9,7 @@
 <body>
 	<div class="main_wraper">
 		<div class="content">
-				<h1 >Створення статьї</h1>
+				<h1 >Створення статі</h1>
 				<p>Завантаження картинки</p>
 				<form method="post" enctype="multipart/form-data">
 	        		<input type="file" name="fileToUpload" id="fileToUpload"/>
