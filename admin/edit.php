@@ -12,22 +12,22 @@
 				<h1 >Видалення статі</h1>
 					<div class="edit">
 	        		<span>Заголовок</span>
-	        		<a href="">Редагувати</a>
+	        		<a href="editor.php">Редагувати</a>
 	        		<a href="">Видалити</a> 
 	        		</div>
 	        		<div class="edit">
 	        		<span>Заголовок</span>
-	        		<a href="">Редагувати</a>
+	        		<a href="editor.php">Редагувати</a>
 	        		<a href="">Видалити</a> 
 	        		</div>
 	        		<div class="edit">
 	        		<span>Заголовок</span>
-	        		<a href="">Редагувати</a>
+	        		<a href="editor.php">Редагувати</a>
 	        		<a href="">Видалити</a> 
 	        		</div>
 	        		<div class="edit">
 	        		<span>Заголовок</span>
-	        		<a href="">Редагувати</a>
+	        		<a href="editor.php">Редагувати</a>
 	        		<a href="">Видалити</a> 
 	        		</div>
 					<a href = "admin.php">Назад</a>
