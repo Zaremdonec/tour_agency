@@ -14,7 +14,7 @@ class Excursion
 		$command = "SELECT `name` FROM `categories`";
 		$queryResult = $this->db->query($command);
 		while ($row = mysqli_fetch_array($queryResult)) {
-			echo "<li><a href='#'>" . $row['name'] . "</a></li>";
+			echo "<li><a href='?id=".$row['name']."'>" . $row['name'] . "</a></li>";
 		}
 	}
 
