@@ -9,21 +9,21 @@
 <body>
 	<div class="main_wraper">
 		<div class="content">
-				<h1 >Створення статьї</h1>
-				<p>Завантаження картинки</p>
+				<h1>Редагування статі</h1>
+				<p>Картинка</p>
+				<img src="../images/backdround.jpg" width="300" height="300">
 				<form method="post" enctype="multipart/form-data">
 	        		<input type="file" name="fileToUpload" id="fileToUpload"/>
 	        		<input type="submit" name="loadImage" value="Upload Image"/>
 	        		<br><br>
-					<input type="text" name="title" placeholder="Заголовок статьї">
-
-					<p>Опис статі</p>
+					<input type="text" name="title" placeholder="Заголовок статї">
+					<br><br>
 	        		<textarea name="editor" id="editor1"></textarea>
 	        		<script type="text/javascript">
 					CKEDITOR.replace( 'editor1');
 					</script>
 					<br><br>
-					<input type="submit" name="createPost" value="Опублікувати статью"/><br>
+					<input type="submit" name="createPost" value="Оновити статю"/><br>
 					<a href = "admin.php">Назад</a>
     			</form>
 			    <?php

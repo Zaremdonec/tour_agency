@@ -200,12 +200,6 @@ body{
 }
 
 
-.text p{
-	position: absolute;
-	width: 100%;
-	overflow: hidden;
-}
-
 .news{
 	width: 27%;
 	float: right;
