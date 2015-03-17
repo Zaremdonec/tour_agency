@@ -7,9 +7,7 @@
 </head>
 <body>
 	<div class="main_wraper">
-		<?php 
-			include("templates/header.php");
-		?>
+		<?php include("templates/header.php"); ?>
 		<div class="content">
 			<div class="tour">
 				<div class="image">
