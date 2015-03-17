@@ -3,16 +3,16 @@
 	padding: 0;
 }
 
-.clear{
+.clear {
 	clear:both;
 }
 
-body{
+body {
 	background: url(../images/backdround.jpg) fixed;
 	background-size: 100%;
 }
 
-.main_wraper{
+.main_wraper {
 	width: 1000px;
 	margin: 0px auto;
 }
@@ -26,7 +26,7 @@ body{
 	border-radius: 8px;
 }
 
-.logo span{
+.logo span {
 	display: block;
 	text-align: center;
 	font: 36px bold;
@@ -34,28 +34,28 @@ body{
 	font-family: Arial;
 }
 
-.logo p{
+.logo p {
 	text-align: center;
 	font: 11px bold;
 	color: white;
 	font-family: Arial;
 }
 
-.menu{
+.menu {
 	width: 100%;
 	float: left;
 	border-radius: 8px 8px 0 0;
 	background-color: #0099cc;
 }
 
-.menu ul{
+.menu ul {
 	display: block;
 	float: left;
 	list-style: none;
 	padding: 0px;
 }
 
-.menu ul li{
+.menu ul li {
 	float: left;
 	display: inline;
 	padding: 15px;
@@ -64,18 +64,18 @@ body{
 	height: 22px;
 }
 
-.menu ul li a{
+.menu ul li a {
 	text-decoration: none;
 	color: white; 
 	font: 18px bold;
 	font-family : Arial;
 }
 
-.menu ul li:hover{
+.menu ul li:hover {
 	background-color:#4682B4;
 }
 
-.contact{
+.contact {
 	float: right;
 	padding: 10px;
 	color: white;
@@ -83,19 +83,19 @@ body{
 	font-family : Arial;
 }
 
-.sity_filter{
+.sity_filter {
 	background-color: white;
 	border-radius: 0 0 8px 8px;
 	padding: 5px 10px;
 }
 
-.sity_filter ul{
+.sity_filter ul {
 	list-style: none;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-.sity_filter ul li{
+.sity_filter ul li {
 	display: inline;
 	color: #fada2a;
 	font-size: 14px;
@@ -112,12 +112,12 @@ body{
 	background-color: rgba(0,153,204,0.2);
 }
 
-.sity_filter ul li a:hover{
+.sity_filter ul li a:hover {
 	background-color: rgba(0,153,204,1);
 	color: white;
 }
 
-.tour{
+.tour {
 	float: left;
 	height: 350px;
 	width: 200px;
@@ -129,7 +129,7 @@ body{
     box-shadow: 1px 6px 3px 0px #888;
 }
 
-.tour:nth-of-type(4n){
+.tour:nth-of-type(4n) {
 	float: left;
 	height: 350px;
 	width: 200px;
@@ -138,39 +138,39 @@ body{
 	margin-right: 0px;
 }
 
-.tour img{
+.tour img {
 	width: 100%;
 	border-radius:10px 10px 0 0;
 }
 
-.title{
+.title {
 	margin: 5px;
 	font: 18px bold;
 	font-family : Arial;
 }
 
-.title a{
+.title a {
 	text-decoration: none;
 	color: black;
 }
 
-.title a:hover{
+.title a:hover {
 	color: #0099cc;
 }
 
-.text{
+.text {
 	margin: 5px;
 	font: 14px bold;
 	font-family : Arial;
 }
 
-.text p{
+.text p {
 	position: absolute;
 	width: 200px;
 	overflow: hidden;
 }
 
-.information{
+.information {
 	position: inherit;
 	text-align: center;
 	height: 20px;
@@ -180,7 +180,7 @@ body{
 	margin-top: 150px;
 }
 
-.information a{
+.information a {
 	color: white;
 	text-decoration: none;
 	font: 14px bold;
@@ -188,7 +188,7 @@ body{
 	padding: 11px 55px 13px;
 }
 
-.tour_item{
+.tour_item {
 	float: left;
 	width: 65%;
 	margin-top: 20px;
@@ -197,32 +197,30 @@ body{
 	padding: 20px;
 }
 
-.tour_item p{
+.tour_item p {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-
-.news{
+.news {
 	width: 27%;
 	float: right;
 	margin-top: 20px;
 	background-color: white;
 	border-radius: 10px;
 	padding: 10px;
-	
 }
 
-.news h2{
+.news h2 {
 	border-bottom: 2px solid #0099cc;
 }
 
-.news p{
+.news p {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-.article{
+.article {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
