@@ -1,0 +1,4 @@
+-- This migration will add new column to table tours `picture_path` for
+
+ALTER TABLE `tours`
+ADD COLUMN `picture_path` VARCHAR(128) NULL DEFAULT NULL;
