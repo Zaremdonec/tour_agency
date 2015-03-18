@@ -36,5 +36,27 @@ class Excursion
 
 	}
 
+	public function print_all_excursion()
+	{	
+		$command = "SELECT * FROM `tours`";
+		$queryResult = $this->db->query($command);
+		while ($item = mysqli_fetch_array($queryResult)) {
+			 echo "<div class='tour'>";
+			 echo "<div class='image'>";
+			 echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><img src='".$item['picture_path']."'></a>";
+				echo "</div>";
+				echo "<div class='title'>";
+				echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$item['title']."</h2></a>";
+				echo "</div>";
+				echo "<div class='text'>";
+					echo "<p>".$item['descr']."</p>";
+				echo "</div>";
+				 echo "<div class='information'>";
+					echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'>Детальніше</a>";
+				 echo "</div>";
+			 echo "</div>";
+			}
+		}
+
 
 }
