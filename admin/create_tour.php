@@ -34,10 +34,10 @@
 					<br><br>
 					<input type="submit" name="createPost" value="Опублікувати статю"/><br>
 					<a href = "control_panel.php">Назад</a>
-					
     			</form>
     			<?php 
-
+    			if(isset($_POST['createPost']))
+    				$excursion->addTour($_POST['category'],$_POST['title'],$_POST['editor'],$_POST['date'],$_FILES["fileToUpload"]["name"]);
     			?>
 			    
 			</div>
