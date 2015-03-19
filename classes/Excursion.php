@@ -9,8 +9,9 @@ class Excursion
 		$this->db = Database::getInstance();
 	}
 
-	public function createCategory($name){
-		$command = "INSERT INTO `categories`(name) VALUES ('".$name."')";
+	public function createCategory($name)
+    {
+		$command = "INSERT INTO `categories`(name) VALUES ('$name')";
 		$this->db->query($command);
 	}
 
@@ -19,25 +20,30 @@ class Excursion
 		$command = "SELECT `name` FROM `categories`";
 		$queryResult = $this->db->query($command);
 		while ($row = mysqli_fetch_array($queryResult)) {
-			echo "<li><a href='?id=".$row['name']."'>" . $row['name'] . "</a></li>";
+            $name = $row['name'];
+			echo "<li><a href='?id=$name'>$name</a></li>";
 		}
 	}
 
 	public function printCategoryAsOptions()
-		{
+    {
 		$command = "SELECT * FROM `categories`";
 		$queryResult = $this->db->query($command);
 		while ($row = mysqli_fetch_array($queryResult)) {
-			echo "<option value=".$row['id'].">". $row['name'] ."</option>";
+            $id = $row['id'];
+            $name = $row['name'];
+			echo "<option value=$id>$name</option>";
 		}
 	}
 
-	public function addTour($image,$title,$category,$desc,$date){
+	public function addTour($image, $title, $category, $desc, $date)
+    {
 
 	}
 
 	public function print_all_excursion()
-	{	$points = "...";
+	{
+        $points = "...";
 		$command = "SELECT * FROM `tours`";
 		$queryResult = $this->db->query($command);
 		while ($item = mysqli_fetch_array($queryResult)) {
