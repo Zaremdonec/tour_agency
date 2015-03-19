@@ -17,8 +17,7 @@ class Excursion
 
 	public function printCategory()
 	{
-
-        $categories = $this->selectCategories();
+	    $categories = $this->selectCategories();
 		while ($row = mysqli_fetch_array($categories)) {
             $id = $row['id'];
             $name = $row['name'];
@@ -51,7 +50,7 @@ class Excursion
         return $this->db->query($command);
     }
 
-	public function print_all_excursion()
+	public function print_all_excursion($city)
 	{
         $points = "...";
 		if(empty($city))
