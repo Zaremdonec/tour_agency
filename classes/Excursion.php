@@ -22,7 +22,7 @@ class Excursion
 		while ($row = mysqli_fetch_array($categories)) {
             $id = $row['id'];
             $name = $row['name'];
-			echo "<li><a href='?id=$id'>$name</a></li>";
+			echo "<li><a href='?city=$id'>$name</a></li>";
 		}
 	}
 
