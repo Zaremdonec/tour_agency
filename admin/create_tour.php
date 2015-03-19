@@ -25,10 +25,7 @@
 					?>
 					  </select>
 					<p>Опис статі</p>
-	        		<textarea name="editor" id="editor1"></textarea>
-	        		<script type="text/javascript">
-					CKEDITOR.replace('editor1');
-					</script>
+	        		<textarea class="ckeditor" name="editor" id="editor1"></textarea>
 					<p>Дата екскурсії</p>
 					<input name="date" placeholder="Дата екскурсії" />
 					<br><br>
