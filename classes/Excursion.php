@@ -16,10 +16,10 @@ class Excursion
 
 	public function printCategory()
 	{
-		$command = "SELECT `name` FROM `categories`";
+		$command = "SELECT * FROM `categories`";
 		$queryResult = $this->db->query($command);
 		while ($row = mysqli_fetch_array($queryResult)) {
-			echo "<li><a href='?id=".$row['name']."'>" . $row['name'] . "</a></li>";
+			echo "<li><a href='?city=".$row['id']."'>" . $row['name'] . "</a></li>";
 		}
 	}
 
@@ -40,9 +40,12 @@ class Excursion
 		$queryResult = $this->db->query($command);
 	}
 
-	public function print_all_excursion()
+	public function print_all_excursion($city)
 	{	$points = "...";
-		$command = "SELECT * FROM `tours`";
+		if(empty($city))
+			$command = "SELECT * FROM `tours`";
+		else
+			$command = "SELECT * FROM `tours` WHERE category_id = '".$city."'";
 		$queryResult = $this->db->query($command);
 		while ($item = mysqli_fetch_array($queryResult)) {
 			$print_title = "";
@@ -83,6 +86,4 @@ class Excursion
 			 echo "</div>";
 			}
 		}
-
-
 }
