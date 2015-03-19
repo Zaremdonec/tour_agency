@@ -37,19 +37,39 @@ class Excursion
 	}
 
 	public function print_all_excursion()
-	{	
+	{	$points = "...";
 		$command = "SELECT * FROM `tours`";
 		$queryResult = $this->db->query($command);
 		while ($item = mysqli_fetch_array($queryResult)) {
-			 echo "<div class='tour'>";
-			 echo "<div class='image'>";
-			 echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><img src='".$item['picture_path']."'></a>";
-				echo "</div>";
-				echo "<div class='title'>";
-				echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$item['title']."</h2></a>";
+			$print_title = "";
+			$print_dect = "";
+			$title_string = $item['title'];
+			$desc_string = $item['descr'];
+			$count_title = strlen($title_string);
+			$count_desc = strlen($desc_string);
+			echo "<div class='tour'>";
+			echo "<div class='image'>";
+			echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><img src='".$item['picture_path']."'></a>";
+			echo "</div>";
+			echo "<div class='title'>";
+			if ($count_title <= 8)  echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$item['title']."</h2></a>";
+				 else
+				 {
+				 	for($i=0; $i<7;$i++)
+				 		$print_title =  $print_title.$title_string{$i};
+				 	$print_title = $print_title.$points;
+				 	echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$print_title."</h2></a>";
+				 };
 				echo "</div>";
 				echo "<div class='text'>";
-					echo "<p>".$item['descr']."</p>";
+					 if ($count_desc <= 220) echo "<p>".$item['descr']."</p>"; 
+					 else
+					 {
+					 	for($i=0; $i<217;$i++)
+				 		$print_dect =  $print_dect.$desc_string{$i};
+				 		$print_dect = $print_dect.$points;
+				 		 echo "<p>".$print_dect."</p>";
+					 }
 				echo "</div>";
 				 echo "<div class='information'>";
 					echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'>Детальніше</a>";
