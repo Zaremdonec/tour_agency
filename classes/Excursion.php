@@ -19,8 +19,9 @@ class Excursion
 	{
         $categories = $this->selectCategories();
 		while ($row = mysqli_fetch_array($categories)) {
+            $id = $row['id'];
             $name = $row['name'];
-			echo "<li><a href='?id=$name'>$name</a></li>";
+			echo "<li><a href='?city=$id'>$name</a></li>";
 		}
 	}
 
