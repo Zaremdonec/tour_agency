@@ -5,7 +5,7 @@
 	</div>
 	<div class="menu">
 		<ul>
-			<li><a href="index.php">Головна</a></li>
+			<li><a href="/index.php">Головна</a></li>
 			<li><a href="#">Транспорт</a></li>
 			<li><a href="#">Бронювання</a></li>
 			<li><a href="#">Контакти</a></li>

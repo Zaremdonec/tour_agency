@@ -27,19 +27,17 @@
 					<p>Опис статі</p>
 	        		<textarea name="editor" id="editor1"></textarea>
 	        		<script type="text/javascript">
-					CKEDITOR.replace( 'editor1');
+					CKEDITOR.replace('editor1');
 					</script>
 					<p>Дата екскурсії</p>
 					<input name="date" placeholder="Дата екскурсії" />
 					<br><br>
 					<input type="submit" name="createPost" value="Опублікувати статю"/><br>
 					<a href = "control_panel.php">Назад</a>
-					
-            
-        
     			</form>
     			<?php 
-
+    			if(isset($_POST['createPost']))
+    				$excursion->addTour($_POST['category'],$_POST['title'],$_POST['editor'],$_POST['date'],$_FILES["fileToUpload"]["name"]);
     			?>
 			    
 			</div>

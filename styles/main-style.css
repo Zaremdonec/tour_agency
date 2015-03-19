@@ -53,12 +53,12 @@ body {
 	float: left;
 	list-style: none;
 	padding: 0px;
+	margin-top: 16px;
 }
 
 .menu ul li {
 	float: left;
 	display: inline;
-	padding: 15px;
 	color: #fada2a;
 	font-size: 14px;
 	height: 22px;
@@ -69,9 +69,10 @@ body {
 	color: white; 
 	font: 18px bold;
 	font-family : Arial;
+	padding: 15px;
 }
 
-.menu ul li:hover {
+.menu ul li a:hover {
 	background-color:#4682B4;
 }
 
@@ -141,9 +142,23 @@ body {
 .tour img {
 	width: 100%;
 	border-radius:10px 10px 0 0;
+	height: 125px;
+	
+}
+
+.image p{
+	position: absolute;
+	color: white;
+	margin-top: -23px;
+	margin-left: 120px;
+	padding-right: 30px;
+	padding-left: 5px;
+	background-color: rgba(0,153,204,0.8);
+	width: 45px;
 }
 
 .title {
+	height: 60px;
 	margin: 5px;
 	font: 18px bold;
 	font-family : Arial;
@@ -159,6 +174,7 @@ body {
 }
 
 .text {
+	height: 110px;
 	margin: 5px;
 	font: 14px bold;
 	font-family : Arial;
@@ -166,7 +182,7 @@ body {
 
 .text p {
 	position: absolute;
-	width: 200px;
+	width: 190px;
 	overflow: hidden;
 }
 
@@ -177,7 +193,6 @@ body {
 	border-radius: 0 0 10px 10px;
 	background-color: #0099cc;
 	padding: 10px;
-	margin-top: 150px;
 }
 
 .information a {
@@ -195,6 +210,10 @@ body {
 	background-color: white;
 	border-radius: 10px;
 	padding: 20px;
+}
+
+.tour_item h1 {
+	color: rgba(0,153,204,0.8);
 }
 
 .tour_item p {

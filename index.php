@@ -22,7 +22,9 @@
 	</div>
 		<div class="content">
 		<?php
-			$excursion->print_all_excursion();
+			if(empty($_GET['city']))
+				$_GET['city'] = null;
+			$excursion->print_all_excursion($_GET['city']);
 		?>
 		</div>
 	</div>

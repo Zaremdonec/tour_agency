@@ -11,7 +11,7 @@
 			include("header.php");
 		?>
 		<div class="tour_item">
-			<h2>Заголовок</h2>
+			<h1>Заголовок</h1>
 			<p>Опис туру</p>
 			<img src="../images/backdround.jpg" width="100%">
 		</div>
