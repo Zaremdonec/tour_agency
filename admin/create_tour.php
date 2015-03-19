@@ -21,7 +21,7 @@
 					<input type="text" name="title" placeholder="Заголовок статі">
 					<select name="category" plaseholder="Місто">
 					<?php
-						$excursion->getCategory();
+						$excursion->printCategoryAsOptions();
 					?>
 					  </select>
 					<p>Опис статі</p>
