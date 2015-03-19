@@ -23,7 +23,7 @@ class Excursion
 		}
 	}
 
-	public function getCategory()
+	public function printCategoryAsOptions()
 		{
 		$command = "SELECT * FROM `categories`";
 		$queryResult = $this->db->query($command);
