@@ -17,9 +17,8 @@ class Excursion
 
 	public function printCategory()
 	{
-		$command = "SELECT `name` FROM `categories`";
-		$queryResult = $this->db->query($command);
-		while ($row = mysqli_fetch_array($queryResult)) {
+        $categories = $this->selectCategories();
+		while ($row = mysqli_fetch_array($categories)) {
             $name = $row['name'];
 			echo "<li><a href='?id=$name'>$name</a></li>";
 		}
@@ -27,14 +26,20 @@ class Excursion
 
 	public function printCategoryAsOptions()
     {
-		$command = "SELECT * FROM `categories`";
-		$queryResult = $this->db->query($command);
-		while ($row = mysqli_fetch_array($queryResult)) {
+		$categories = $this->selectCategories();
+		while ($row = mysqli_fetch_array($categories)) {
             $id = $row['id'];
             $name = $row['name'];
 			echo "<option value=$id>$name</option>";
 		}
 	}
+
+    private function selectCategories()
+    {
+        $command = "SELECT * FROM `categories`";
+        return $this->db->query($command);
+    }
+
 
 	public function addTour($image, $title, $category, $desc, $date)
     {
