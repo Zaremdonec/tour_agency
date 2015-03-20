@@ -28,6 +28,27 @@ class Excursion
         return $instance;
     }
 
+    public function printTitle()
+    {
+        echo $this->_title;
+    }
+
+    public function printDate()
+    {
+        echo $this->_date;
+    }
+
+    public function printDescription()
+    {
+        echo $this->_description;
+    }
+
+    public function printPicture()
+    {
+        $picturePath = $this->_picturePath;
+        echo "<img src='$picturePath'>";
+    }
+
 	public function createCategory($name)
     {
 		$command = "INSERT INTO `categories`(name) VALUES ('$name')";
