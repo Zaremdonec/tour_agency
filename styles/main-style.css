@@ -223,6 +223,12 @@ body {
 	color: rgba(0,153,204,0.8);
 }
 
+.tour_item span{
+	font: 12px bold;
+	font-family : Arial;
+	color: #AAA;
+}
+
 .tour_item p {
 	margin-top: 20px;
 	margin-bottom: 20px;
