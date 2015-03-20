@@ -60,7 +60,7 @@ class Excursion
 		$this->db->query($command);
 	}
 
-	public function printCategory()
+	public function printAllCategories()
 	{
 	    $categories = $this->selectCategories();
 		while ($row = mysqli_fetch_array($categories)) {
