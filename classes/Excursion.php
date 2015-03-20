@@ -106,8 +106,8 @@ class Excursion
 			while ($item = mysqli_fetch_array($queryResult)) {
 				echo "<div class='edit'>";
 	        	echo "<span>".$item['title']."</span>";
-	        	echo "<a href='editor.php?id=".$item['id']."'>Редагувати</a>";
-	        	echo "<a href=''> Видалити</a>";
+	        	echo "<a href='editor.php?id=".$item['id']."'>Редагувати </a>";
+	        	echo "<a href='delete.php?id=".$item['id']."'> Видалити</a>";
 	        	echo "</div>";
 			}
 		}
@@ -162,6 +162,12 @@ class Excursion
 				echo "<a href = 'edit.php'>Назад</a>";
 	    		echo "</form>";
     		}
+		}
+
+		public function deleteTour($id_tour)
+		{
+			$command = "DELETE  FROM `tours` WHERE `id` = '$id_tour'";
+			$queryResult = $this->db->query($command);
 		}
 
 }

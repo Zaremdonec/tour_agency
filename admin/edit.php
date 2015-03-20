@@ -15,7 +15,7 @@
 		<div class="content">
 				<h1 >Видалення статі</h1>
 				<?php 
-				$excursion->printToursForEdit();
+					$excursion->printToursForEdit();
 				?>
 					<a href = "control_panel.php">Назад</a>
 			</div>

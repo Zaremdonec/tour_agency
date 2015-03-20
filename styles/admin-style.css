@@ -38,6 +38,7 @@
 
 .content a:hover{
 	color: white;
+	text-shadow: 2px 2px gray;
 }
 
 .edit{
@@ -52,4 +53,7 @@
 
 }
 
+.edit a {
+	margin-left: 3px;	
+}
 
