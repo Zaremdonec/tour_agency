@@ -28,30 +28,29 @@ class Excursion
         return $instance;
     }
 
-    public function printTitle()
+    public function getTitle()
     {
-        echo $this->_title;
+        return $this->_title;
     }
 
-    public function printDate()
+    public function getDate()
     {
-        echo $this->_date;
+        return $this->_date;
     }
 
-    public function printDescription()
+    public function getDescription()
     {
-        echo $this->_description;
+        return $this->_description;
     }
 
-    public function printPicture()
+    public function getPicturePath()
     {
-        $picturePath = $this->_picturePath;
-        echo "<img src='$picturePath'>";
+        return $this->_picturePath;
     }
 
-    public function printCategory()
+    public function getCategory()
     {
-        echo $this->_city;
+        return $this->_city;
     }
 
 	public function createCategory($name)
