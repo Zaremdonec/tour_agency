@@ -4,10 +4,20 @@ include('Database.php');
 class Excursion
 {
 	private $db;
+    private $_title;
+    private $_description;
+    private $_picturePath;
 	public function __construct()
 	{
 		$this->db = Database::getInstance();
 	}
+
+    static public function getById($id)
+    {
+        $instance = new self();
+        $result = $this->db->query("SELECT * FROM `categories` WHERE id=$id");
+
+    }
 
 	public function createCategory($name)
     {
