@@ -8,12 +8,21 @@
 <body>
 	<div class="main_wraper">
 		<?php 
-			include("header.php");
+        include("header.php");
+        require("../classes/Excursion.php");
+        $tour = new Excursion();
+        if(isset($_GET['id'])) {
+            $tour = Excursion::getById($_GET['id']);
+        }
 		?>
 		<div class="tour_item">
-			<h1>Заголовок</h1>
-			<p>Опис туру</p>
-			<img src="../images/backdround.jpg" width="100%">
+			<h1>
+                <?= $tour->getTitle() ?>
+            </h1>
+			<p>
+                <?= $tour->getTitle() ?>
+            </p>
+			<img src="<?= $tour->getPicturePath() ?>" width="100%">
 		</div>
 		<div class="news">	
 		<h2>Новини</h2>
