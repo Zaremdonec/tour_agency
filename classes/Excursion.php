@@ -113,18 +113,18 @@ class Excursion
 			$count_desc = strlen($desc_string);
 			echo "<div class='tour'>";
 			echo "<div class='image'>";
-			echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><img src='".$item['picture_path']."'></a>";
+			echo "<a href='templates/tour_item.php?id={$item['id']}'><img src='".$item['picture_path']."'></a>";
 			$category_name = mysqli_fetch_array($this->db->query("SELECT name FROM `categories` WHERE id = '".$item['category_id']."'"));
 			echo "<p>".$category_name['name']."</p>";
 			echo "</div>";
 			echo "<div class='title'>";
-			if ($count_title <= 39)  echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$item['title']."</h2></a>";
+			if ($count_title <= 39)  echo "<a href='templates/tour_item.php?id={$item['id']}'><h2>".$item['title']."</h2></a>";
 				 else
 				 {
 				 	for($i=0; $i<39;$i++)
 				 		$print_title =  $print_title.$title_string{$i};
 				 	$print_title = $print_title.$points;
-				 	echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$print_title."</h2></a>";
+				 	echo "<a href='templates/tour_item.php?id={$item['id']}'><h2>".$print_title."</h2></a>";
 				 };
 			echo "</div>";
 			echo "<div class='text'>";
@@ -138,7 +138,7 @@ class Excursion
 					 }
 			echo "</div>";
 			echo "<div class='information'>";
-			echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'>Детальніше</a>";
+			echo "<a href='templates/tour_item.php?id={$item['id']}'>Детальніше</a>";
 			echo "</div>";
 			echo "</div>";
 		}
