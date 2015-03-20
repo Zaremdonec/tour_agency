@@ -19,6 +19,9 @@
 			<h1>
                 <?= $tour->getTitle() ?>
             </h1>
+            <div class="date">
+                <?= $tour->getDate() ?>
+            </div>
 			<p>
                 <?= $tour->getTitle() ?>
             </p>

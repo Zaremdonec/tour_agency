@@ -228,6 +228,13 @@ body {
 	margin-bottom: 20px;
 }
 
+.tour_item .date {
+    color: #9c9c9c;
+    font-size: 14px;
+    font-weight: bolder;
+    margin: 6px 2px;
+}
+
 .news {
 	width: 27%;
 	float: right;
