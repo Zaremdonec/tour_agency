@@ -73,7 +73,8 @@ body {
 }
 
 .menu ul li a:hover {
-	background-color:#4682B4;
+	background-color: #0082b4;
+    border-radius: 8px 8px 8px 8px;
 }
 
 .contact {
