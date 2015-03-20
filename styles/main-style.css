@@ -211,9 +211,12 @@ body {
 	padding: 11px 55px 13px;
 }
 
+.wrap {
+    float: left;
+    width: 65%;
+}
+
 .tour_item {
-	float: left;
-	width: 65%;
 	margin-top: 20px;
 	background-color: white;
 	border-radius: 10px;
@@ -234,6 +237,13 @@ body {
     font-size: 14px;
     font-weight: bolder;
     margin: 6px 2px;
+}
+
+.comments {
+    border-radius: 10px;
+    height: 200px;
+    background-color: white;
+    margin-top: 20px;
 }
 
 .news {

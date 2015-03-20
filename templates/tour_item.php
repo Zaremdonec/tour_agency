@@ -15,19 +15,26 @@
             $tour = Excursion::getById($_GET['id']);
         }
 		?>
-		<div class="tour_item">
-			<h1>
-                <?= $tour->getTitle() ?>
-            </h1>
-            <div class="date">
-                <?= $tour->getDate() ?>
+        <div class="wrap">
+            <div class="tour_item">
+                <h1>
+                    <?= $tour->getTitle() ?>
+                </h1>
+                <div class="date">
+                    <?= $tour->getDate() ?>
+                </div>
+                <p>
+                    <?= $tour->getDescription() ?>
+                </p>
+                <img src="<?= $tour->getPicturePath() ?>" width="100%">
             </div>
-			<p>
-                <?= $tour->getDescription() ?>
-            </p>
-			<img src="<?= $tour->getPicturePath() ?>" width="100%">
-		</div>
-		<div class="news">	
+            <div class="comments">
+                <div class="leave-comment">
+
+                </div>
+            </div>
+        </div>
+		<div class="news">
 		<h2>Новини</h2>
 		<div class="article"></div>
 			<h3>Два тури за ціною одного</h3>
