@@ -113,7 +113,7 @@ class Excursion
 			$count_desc = strlen($desc_string);
 			echo "<div class='tour'>";
 			echo "<div class='image'>";
-			echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><img src='".$item['picture_path']."'></a>";
+			echo "<a href='templates/tour_item.php?id={$item['id']}'><img src='".$item['picture_path']."'></a>";
 			$category_name = mysqli_fetch_array($this->db->query("SELECT name FROM `categories` WHERE id = '".$item['category_id']."'"));
 			echo "<p>".$category_name['name']."</p>";
 			echo "</div>";
