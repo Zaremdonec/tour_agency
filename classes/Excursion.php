@@ -18,13 +18,14 @@ class Excursion
     static public function getById($id)
     {
         $instance = new self();
-        $result = Database::getInstance()->query("SELECT * FROM `categories` WHERE id=$id");
-        $row = mysqli_fetch_row($result);
+        $command = "SELECT * FROM tours WHERE tours.id=$id";
+        $result = Database::getInstance()->query($command);
+        $row = mysqli_fetch_array($result);
         $instance->_title = $row['title'];
         $instance->_date = $row['date'];
         $instance->_description = $row['descr'];
         $instance->_picturePath = $row['picture_path'];
-        $instance->_city = $row['category'];
+        //$instance->_city = $row['category'];
         return $instance;
     }
 
