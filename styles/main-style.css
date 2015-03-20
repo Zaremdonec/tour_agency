@@ -241,9 +241,59 @@ body {
 
 .comments {
     border-radius: 10px;
-    height: 200px;
     background-color: white;
     margin-top: 20px;
+    padding: 20px;
+}
+
+.comments h2 {
+    color: rgba(0,153,204,0.8);
+}
+
+.comments .leave-comment {
+    margin: 20px 10px 10px;
+}
+
+.comments label {
+    font-size: 18px;
+    display: block;
+    margin: 18px 8px 10px;
+}
+
+.comments .input {
+    display: block;
+    width: 550px;
+    padding: 8px;
+    margin: 10px 0px;
+    font-size: 15px;
+    font-family: 'Arial';
+}
+
+.comments textarea {
+    resize: none;
+    height: 80px;
+}
+
+.comments .btn {
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    font: 14px bold;
+    font-family : Arial black;
+    color: #4682B4;
+    background-color: rgba(0,153,204,0.2);
+    border-radius: 4px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.comments .btn:hover {
+    background-color: rgba(0,153,204,1);
+    color: white;
+    box-shadow: 0px 2px 4px gray;
 }
 
 .news {

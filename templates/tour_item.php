@@ -29,8 +29,17 @@
                 <img src="<?= $tour->getPicturePath() ?>" width="100%">
             </div>
             <div class="comments">
+                <h2>Коментарі</h2>
+<!--                Comments goes here-->
+                <hr>
                 <div class="leave-comment">
-
+                    <form>
+                        <label for="input1">Ім'я:</label>
+                        <input id='input1' class="input">
+                        <label for="text1">Коментар:</label>
+                        <textarea id="text1" class="input"></textarea>
+                        <input class="btn" type="button" name="post-button" value="Опублікувати">
+                    </form>
                 </div>
             </div>
         </div>
