@@ -21,14 +21,13 @@
 					<input type="text" name="title" placeholder="Заголовок статі">
 					<select name="category" plaseholder="Місто">
 					<?php
-						$excursion->getCategory();
+						$excursion->printCategoryAsOptions();
 					?>
 					  </select>
 					<p>Опис статі</p>
 	        		<textarea class="ckeditor" name="editor" id="editor1"></textarea>
-
 					<p>Дата екскурсії</p>
-					<input name="date" placeholder="Дата екскурсії" />
+					<input type="date" name="date" placeholder="Дата екскурсії" />
 					<br><br>
 					<input type="submit" name="createPost" value="Опублікувати статю"/><br>
 					<a href = "control_panel.php">Назад</a>
