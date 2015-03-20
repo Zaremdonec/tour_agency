@@ -38,6 +38,7 @@
 
 .content a:hover{
 	color: white;
+	text-shadow: 2px 2px gray;
 }
 
 .edit{
@@ -47,10 +48,12 @@
 
 .edit span{
 	float: left;
-	margin-right: 100px;
+	margin-right: 10px;
+	width: 200px;
 
 }
 
-.edit a{
+.edit a {
+	margin-left: 3px;	
 }
 

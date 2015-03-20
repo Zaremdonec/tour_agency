@@ -1,3 +1,7 @@
+<?php
+	include("../classes/Excursion.php");
+	$excursion = new Excursion();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,26 +14,9 @@
 	<div class="main_wraper">
 		<div class="content">
 				<h1 >Видалення статі</h1>
-					<div class="edit">
-	        		<span>Заголовок</span>
-	        		<a href="editor.php">Редагувати</a>
-	        		<a href="">Видалити</a> 
-	        		</div>
-	        		<div class="edit">
-	        		<span>Заголовок</span>
-	        		<a href="editor.php">Редагувати</a>
-	        		<a href="">Видалити</a> 
-	        		</div>
-	        		<div class="edit">
-	        		<span>Заголовок</span>
-	        		<a href="editor.php">Редагувати</a>
-	        		<a href="">Видалити</a> 
-	        		</div>
-	        		<div class="edit">
-	        		<span>Заголовок</span>
-	        		<a href="editor.php">Редагувати</a>
-	        		<a href="">Видалити</a> 
-	        		</div>
+				<?php 
+					$excursion->printToursForEdit();
+				?>
 					<a href = "control_panel.php">Назад</a>
 			</div>
 	</div>

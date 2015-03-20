@@ -13,14 +13,11 @@
 <body>
 	<div class="main_wraper">
 		<div class="content">
-				<h1>Редагування статі</h1>
-				<p>Картинка</p>
-			   		<?php 
-			   			$excursion->printEditorForm($_GET['id']);
-    					if(isset($_POST['createPost']))
-    					$excursion->updateTour($_POST['category'],$_POST['title'],$_POST['editor'],$_POST['dateTour'],$_FILES["fileToUpload"]["name"],$_GET['id']);
-    				?>
-
+				<h1 >Тур успішно видалений!</h1>
+				<?php 
+					$excursion->deleteTour($_GET['id']);
+				?>
+					<a href = "control_panel.php">Назад</a>
 			</div>
 	</div>
 </body>
