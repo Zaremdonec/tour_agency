@@ -23,7 +23,7 @@
                 <?= $tour->getDate() ?>
             </div>
 			<p>
-                <?= $tour->getTitle() ?>
+                <?= $tour->getDescription() ?>
             </p>
 			<img src="<?= $tour->getPicturePath() ?>" width="100%">
 		</div>
