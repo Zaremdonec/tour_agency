@@ -58,7 +58,8 @@ class Excursion
 		else
 			$command = "SELECT * FROM `tours` WHERE category_id = '".$city."'";
 		$queryResult = $this->db->query($command);
-		while ($item = mysqli_fetch_array($queryResult)) {
+		while ($item = mysqli_fetch_array($queryResult)) 
+		{
 			$print_title = "";
 			$print_dect = "";
 			$title_string = $item['title'];
@@ -69,7 +70,7 @@ class Excursion
 			echo "<div class='image'>";
 			echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><img src='".$item['picture_path']."'></a>";
 			$category_name = mysqli_fetch_array($this->db->query("SELECT name FROM `categories` WHERE id = '".$item['category_id']."'"));
-			 echo "<p>".$category_name['name']."</p>";
+			echo "<p>".$category_name['name']."</p>";
 			echo "</div>";
 			echo "<div class='title'>";
 			if ($count_title <= 39)  echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$item['title']."</h2></a>";
@@ -80,21 +81,93 @@ class Excursion
 				 	$print_title = $print_title.$points;
 				 	echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$print_title."</h2></a>";
 				 };
-				echo "</div>";
-				echo "<div class='text'>";
-					 if ($count_desc <= 290) echo "<p>".$item['descr']."</p>"; 
+			echo "</div>";
+			echo "<div class='text'>";
+					 if ($count_desc <= 180) echo "<p>".$item['descr']."</p>"; 
 					 else
 					 {
-					 	for($i=0; $i<290;$i++)
+					 	for($i=0; $i<177;$i++)
 				 		$print_dect =  $print_dect.$desc_string{$i};
 				 		$print_dect = $print_dect.$points;
-				 		 echo "<p>".$print_dect."</p>";
+				 		echo "<p>".$print_dect."</p>";
 					 }
-				echo "</div>";
-				 echo "<div class='information'>";
-					echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'>Детальніше</a>";
-				 echo "</div>";
-			 echo "</div>";
+			echo "</div>";
+			echo "<div class='information'>";
+			echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'>Детальніше</a>";
+			echo "</div>";
+			echo "</div>";
+		}
+	}
+
+		public function printToursForEdit()
+		{
+			$command = "SELECT * FROM `tours`";
+			$queryResult = $this->db->query($command);
+			while ($item = mysqli_fetch_array($queryResult)) {
+				echo "<div class='edit'>";
+	        	echo "<span>".$item['title']."</span>";
+	        	echo "<a href='editor.php?id=".$item['id']."'>Редагувати </a>";
+	        	echo "<a href='delete.php?id=".$item['id']."'> Видалити</a>";
+	        	echo "</div>";
 			}
 		}
+
+		public function updateTour($category_id, $title, $descr, $date, $image_path,$id_tour)
+		{
+			if(empty($image_path))
+			{
+				$command = "SELECT * FROM `tours` WHERE `id` = '$id_tour'";
+				$queryResult = $this->db->query($command);
+				while ($item = mysqli_fetch_array($queryResult))
+				{
+					$target_file = $item['picture_path'];
+				}
+			}
+			else
+			{
+				$target_dir = "../images/";
+	        	$target_file = $target_dir . $image_path;
+	        	copy($_FILES["fileToUpload"]["tmp_name"], $target_file);
+			}
+			
+			$command = "UPDATE `tours` SET `category_id` = '$category_id', `title` = '$title', `descr`= '$descr', `date` = '$date', `picture_path` = '$target_file' WHERE `id` = '$id_tour'";
+			$queryResult = $this->db->query($command);
+		}
+
+
+		public function printEditorForm($id_tour) 
+		{
+			$command = "SELECT * FROM `tours` WHERE `id` = '$id_tour'";
+			$queryResult = $this->db->query($command);
+			while ($item = mysqli_fetch_array($queryResult)) 
+			{
+				echo "<img src='".$item['picture_path']."' width='300' height='300'>";
+				echo "<form method='post' enctype='multipart/form-data'>";
+		        echo "<input type='file' name='fileToUpload' id='fileToUpload'/>";
+		        echo "<br><br>";
+				echo "<input type='text' name='title' value='".$item['title']."'>";
+				echo "<br><br>";
+				echo "<select name='category' value='".$item['category_id']."'>";
+				$this->printCategoryAsOptions();
+				echo "</select>";
+				echo "<br><br>";
+				echo "<input type='date' name='dateTour' value = '".$item['date']."'/>";
+				echo "<br><br>";
+		        echo "<textarea name='editor' id='editor1'>".$item['descr']."</textarea>";
+		        echo "<script type='text/javascript'>";
+				echo "CKEDITOR.replace( 'editor1');";
+				echo "</script>";
+				echo "<br><br>";
+				echo "<input type='submit' name='createPost' value='Оновити статю'/><br>";
+				echo "<a href = 'edit.php'>Назад</a>";
+	    		echo "</form>";
+    		}
+		}
+
+		public function deleteTour($id_tour)
+		{
+			$command = "DELETE  FROM `tours` WHERE `id` = '$id_tour'";
+			$queryResult = $this->db->query($command);
+		}
+
 }
