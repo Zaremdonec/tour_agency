@@ -47,10 +47,9 @@
 
 .edit span{
 	float: left;
-	margin-right: 100px;
+	margin-right: 10px;
+	width: 200px;
 
 }
 
-.edit a{
-}
 

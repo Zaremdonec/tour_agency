@@ -97,4 +97,18 @@ class Excursion
 			 echo "</div>";
 			}
 		}
+
+		public function printToursForEdit()
+		{
+			$command = "SELECT * FROM `tours`";
+			$queryResult = $this->db->query($command);
+			while ($item = mysqli_fetch_array($queryResult)) {
+				echo "<div class='edit'>";
+	        	echo "<span>".$item['title']."</span>";
+	        	echo "<a href='editor.php?id=".$item['id']."'>Редагувати</a>";
+	        	echo "<a href=''> Видалити</a>";
+	        		echo "</div>";
+			}
+		}
+
 }
