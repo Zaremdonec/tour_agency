@@ -7,7 +7,9 @@ class Excursion
     private $_title;
     private $_description;
     private $_picturePath;
+    private $_city;
     private $_date;
+
 	public function __construct()
 	{
 		$this->db = Database::getInstance();
@@ -16,8 +18,14 @@ class Excursion
     static public function getById($id)
     {
         $instance = new self();
-        $result = $this->db->query("SELECT * FROM `categories` WHERE id=$id");
-
+        $result = Database::getInstance()->query("SELECT * FROM `categories` WHERE id=$id");
+        $row = mysqli_fetch_row($result);
+        $instance->_title = $row['title'];
+        $instance->_date = $row['date'];
+        $instance->_description = $row['descr'];
+        $instance->_picturePath = $row['picture_path'];
+        $instance->_city = $row['category'];
+        return $instance;
     }
 
 	public function createCategory($name)
