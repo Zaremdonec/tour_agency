@@ -49,6 +49,11 @@ class Excursion
         echo "<img src='$picturePath'>";
     }
 
+    public function printCategory()
+    {
+        echo $this->_city;
+    }
+
 	public function createCategory($name)
     {
 		$command = "INSERT INTO `categories`(name) VALUES ('$name')";
