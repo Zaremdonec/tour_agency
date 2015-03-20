@@ -190,14 +190,18 @@ class Excursion
 				echo "<form method='post' enctype='multipart/form-data'>";
 		        echo "<input type='file' name='fileToUpload' id='fileToUpload'/>";
 		        echo "<br><br>";
+		        echo "<h2>Назва туру</h2>";
 				echo "<input type='text' name='title' value='".$item['title']."'>";
 				echo "<br><br>";
+				echo "<h2>Місто</h2>";
 				echo "<select name='category' value='".$item['category_id']."'>";
 				$this->printCategoryAsOptions();
 				echo "</select>";
 				echo "<br><br>";
+				echo "<h2>Дата проведення туру</h2>";
 				echo "<input type='date' name='dateTour' value = '".$item['date']."'/>";
 				echo "<br><br>";
+				echo "<h2>Опис</h2>";
 		        echo "<textarea name='editor' id='editor1'>".$item['descr']."</textarea>";
 		        echo "<script type='text/javascript'>";
 				echo "CKEDITOR.replace( 'editor1');";
