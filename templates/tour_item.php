@@ -1,17 +1,3 @@
-<?php
-include("header.php");
-require("../classes/Excursion.php");
-$tour = new Excursion();
-if(isset($_GET['id'])) {
-    $tour_id = $_GET['id'];
-    $tour = Excursion::getById($tour_id);
-    if(isset($_POST['post-btn'])) {
-        $comment = new Comment($_POST['author'], $_POST['text']);
-        $comment->attach($tour_id);
-    }
-}
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +7,20 @@ if(isset($_GET['id'])) {
 </head>
 <body>
 	<div class="main_wraper">
+        <?php
+        include("header.php");
+        require_once("../classes/Excursion.php");
+        require_once("../classes/Comment.php");
+        $tour = new Excursion();
+        if(isset($_GET['id'])) {
+            $tour_id = $_GET['id'];
+            $tour = Excursion::getById($tour_id);
+            if(isset($_POST['post-btn'])) {
+                $comment = new Comment($_POST['author'], $_POST['text']);
+                $comment->attach($tour_id);
+            }
+        }
+        ?>
         <div class="wrap">
             <div class="tour_item">
                 <h1>
@@ -37,7 +37,7 @@ if(isset($_GET['id'])) {
             <div class="comments">
                 <h2>Коментарі</h2>
 <!--                Comments goes here-->
-                <?php for($i=0; $i<10; $i++) { ?>
+                <?php for($i=0; $i<5; $i++) { ?>
                     <div class="comment">
                         <strong>Автор</strong>
                         <span>2015-05-20</span>
@@ -47,12 +47,12 @@ if(isset($_GET['id'])) {
                 <?php } ?>
                 <hr>
                 <div class="leave-comment">
-                    <form method="post" action="tour_item.php">
+                    <form method="post" action="<?php if(isset($_GET['id'])) echo $_SERVER['PHP_SELF']."?id={$_GET['id']}"?>">
                         <label for="input1">Ім'я:</label>
                         <input id='input1' name="author" class="input">
                         <label for="text1">Коментар:</label>
                         <textarea id="text1" name="text" class="input"></textarea>
-                        <input class="btn" type="button" name="post-btn" value="Опублікувати">
+                        <input class="btn" type="submit" name="post-btn" value="Опублікувати">
                     </form>
                 </div>
             </div>
