@@ -250,8 +250,29 @@ body {
     color: rgba(0,153,204,0.8);
 }
 
+.comments .comment {
+    margin: 20px 10px;
+    width: 90%;
+}
+
+.comments .comment strong {
+    font-size: 20px;
+    float: left;
+}
+
+.comments .comment p {
+    margin: 5px 0px;
+}
+
+.comments .comment span {
+    color: #9c9c9c;
+    float: right;
+    font-size: 14px;
+}
+
 .comments .leave-comment {
     margin: 20px 10px 10px;
+    width: 90%;
 }
 
 .comments label {
@@ -262,7 +283,7 @@ body {
 
 .comments .input {
     display: block;
-    width: 550px;
+    width: 100%;
     padding: 8px;
     margin: 10px 0px;
     font-size: 15px;

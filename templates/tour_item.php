@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="main_wraper">
-		<?php 
+		<?php
         include("header.php");
         require("../classes/Excursion.php");
         $tour = new Excursion();
@@ -31,9 +31,17 @@
             <div class="comments">
                 <h2>Коментарі</h2>
 <!--                Comments goes here-->
+                <?php for($i=0; $i<10; $i++) { ?>
+                    <div class="comment">
+                        <strong>Автор</strong>
+                        <span>2015-05-20</span>
+                        <div style="clear: both"></div>
+                        <p>f fsldjg sdlfkjv s;ldfkrusldfkj  fsj;ldfkj fasld;fkj asdfljpaosiefuj afsldjf asdfkljasodifu a;sldfka dk ;a sdlfjas;dofuas;ldfj as;ldfa;dslfuads fs dfkjads; fliauwe;fja s;dlkjasd fu;a sdflj gsl;dkfj </p>
+                    </div>
+                <?php } ?>
                 <hr>
                 <div class="leave-comment">
-                    <form>
+                    <form method="post" action="tour_item.php">
                         <label for="input1">Ім'я:</label>
                         <input id='input1' class="input">
                         <label for="text1">Коментар:</label>
