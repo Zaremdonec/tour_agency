@@ -37,15 +37,11 @@
             </div>
             <div class="comments">
                 <h2>Коментарі</h2>
-<!--                Comments goes here-->
-                <?php for($i=0; $i<5; $i++) { ?>
-                    <div class="comment">
-                        <strong>Автор</strong>
-                        <span>2015-05-20</span>
-                        <div style="clear: both"></div>
-                        <p>f fsldjg sdlfkjv s;ldfkrusldfkj  fsj;ldfkj fasld;fkj asdfljpaosiefuj afsldjf asdfkljasodifu a;sldfka dk ;a sdlfjas;dofuas;ldfj as;ldfa;dslfuads fs dfkjads; fliauwe;fja s;dlkjasd fu;a sdflj gsl;dkfj </p>
-                    </div>
-                <?php } ?>
+                <?php
+                if(isset($_GET['id'])) {
+                    Comment::printAllComments($_GET['id']);
+                }
+                ?>
                 <hr>
                 <div class="leave-comment">
                     <form method="post" action="<?php if(isset($_GET['id'])) echo $_SERVER['PHP_SELF']."?id={$_GET['id']}"?>">
