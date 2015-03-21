@@ -14,7 +14,7 @@
 	<div class="main_wraper">
 		<div class="content">
 				<h1>Редагування статі</h1>
-				<p>Картинка</p>
+				<h2>Картинка</h2>
 			   		<?php 
 			   			$excursion->printEditorForm($_GET['id']);
     					if(isset($_POST['createPost']))

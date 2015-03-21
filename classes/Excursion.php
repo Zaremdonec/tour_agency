@@ -4,10 +4,55 @@ include('Database.php');
 class Excursion
 {
 	private $db;
+    private $_title;
+    private $_description;
+    private $_picturePath;
+    private $_city;
+    private $_date;
+
 	public function __construct()
 	{
 		$this->db = Database::getInstance();
 	}
+
+    static public function getById($id)
+    {
+        $instance = new self();
+        $command = "SELECT * FROM tours WHERE tours.id=$id";
+        $result = Database::getInstance()->query($command);
+        $row = mysqli_fetch_array($result);
+        $instance->_title = $row['title'];
+        $instance->_date = $row['date'];
+        $instance->_description = $row['descr'];
+        $instance->_picturePath = $row['picture_path'];
+        //$instance->_city = $row['category'];
+        return $instance;
+    }
+
+    public function getTitle()
+    {
+        return $this->_title;
+    }
+
+    public function getDate()
+    {
+        return $this->_date;
+    }
+
+    public function getDescription()
+    {
+        return $this->_description;
+    }
+
+    public function getPicturePath()
+    {
+        return $this->_picturePath;
+    }
+
+    public function getCategory()
+    {
+        return $this->_city;
+    }
 
 	public function createCategory($name)
     {
@@ -15,7 +60,7 @@ class Excursion
 		$this->db->query($command);
 	}
 
-	public function printCategory()
+	public function printAllCategories()
 	{
 	    $categories = $this->selectCategories();
 		while ($row = mysqli_fetch_array($categories)) {
@@ -68,18 +113,18 @@ class Excursion
 			$count_desc = strlen($desc_string);
 			echo "<div class='tour'>";
 			echo "<div class='image'>";
-			echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><img src='".$item['picture_path']."'></a>";
+			echo "<a href='templates/tour_item.php?id={$item['id']}'><img src='".$item['picture_path']."'></a>";
 			$category_name = mysqli_fetch_array($this->db->query("SELECT name FROM `categories` WHERE id = '".$item['category_id']."'"));
 			echo "<p>".$category_name['name']."</p>";
 			echo "</div>";
 			echo "<div class='title'>";
-			if ($count_title <= 39)  echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$item['title']."</h2></a>";
+			if ($count_title <= 39)  echo "<a href='templates/tour_item.php?id={$item['id']}'><h2>".$item['title']."</h2></a>";
 				 else
 				 {
 				 	for($i=0; $i<39;$i++)
 				 		$print_title =  $print_title.$title_string{$i};
 				 	$print_title = $print_title.$points;
-				 	echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'><h2>".$print_title."</h2></a>";
+				 	echo "<a href='templates/tour_item.php?id={$item['id']}'><h2>".$print_title."</h2></a>";
 				 };
 			echo "</div>";
 			echo "<div class='text'>";
@@ -93,7 +138,7 @@ class Excursion
 					 }
 			echo "</div>";
 			echo "<div class='information'>";
-			echo "<a href='templates/tour_item.php?id=".$item['id']."&title=".$item['title']."'>Детальніше</a>";
+			echo "<a href='templates/tour_item.php?id={$item['id']}'>Детальніше</a>";
 			echo "</div>";
 			echo "</div>";
 		}
@@ -145,14 +190,18 @@ class Excursion
 				echo "<form method='post' enctype='multipart/form-data'>";
 		        echo "<input type='file' name='fileToUpload' id='fileToUpload'/>";
 		        echo "<br><br>";
+		        echo "<h2>Назва туру</h2>";
 				echo "<input type='text' name='title' value='".$item['title']."'>";
 				echo "<br><br>";
+				echo "<h2>Місто</h2>";
 				echo "<select name='category' value='".$item['category_id']."'>";
 				$this->printCategoryAsOptions();
 				echo "</select>";
 				echo "<br><br>";
+				echo "<h2>Дата проведення туру</h2>";
 				echo "<input type='date' name='dateTour' value = '".$item['date']."'/>";
 				echo "<br><br>";
+				echo "<h2>Опис</h2>";
 		        echo "<textarea name='editor' id='editor1'>".$item['descr']."</textarea>";
 		        echo "<script type='text/javascript'>";
 				echo "CKEDITOR.replace( 'editor1');";

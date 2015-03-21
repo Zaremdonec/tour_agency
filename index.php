@@ -16,7 +16,7 @@
 		Екскурсії
 		<ul>
 			<?php
-				$excursion->printCategory();
+				$excursion->printAllCategories();
 			?>
 		</ul>
 	</div>
