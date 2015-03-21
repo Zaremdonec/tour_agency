@@ -211,9 +211,12 @@ body {
 	padding: 11px 55px 13px;
 }
 
+.wrap {
+    float: left;
+    width: 65%;
+}
+
 .tour_item {
-	float: left;
-	width: 65%;
 	margin-top: 20px;
 	background-color: white;
 	border-radius: 10px;
@@ -234,6 +237,84 @@ body {
     font-size: 14px;
     font-weight: bolder;
     margin: 6px 2px;
+}
+
+.comments {
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.comments h2 {
+    color: rgba(0,153,204,0.8);
+}
+
+.comments .comment {
+    margin: 20px 10px;
+    width: 90%;
+}
+
+.comments .comment strong {
+    font-size: 20px;
+    float: left;
+}
+
+.comments .comment p {
+    margin: 5px 0px;
+}
+
+.comments .comment span {
+    color: #9c9c9c;
+    float: right;
+    font-size: 14px;
+}
+
+.comments .leave-comment {
+    margin: 20px 10px 10px;
+    width: 90%;
+}
+
+.comments label {
+    font-size: 18px;
+    display: block;
+    margin: 18px 8px 10px;
+}
+
+.comments .input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0px;
+    font-size: 15px;
+    font-family: 'Arial';
+}
+
+.comments textarea {
+    resize: none;
+    height: 80px;
+}
+
+.comments .btn {
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    font: 14px bold;
+    font-family : Arial black;
+    color: #4682B4;
+    background-color: rgba(0,153,204,0.2);
+    border-radius: 4px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.comments .btn:hover {
+    background-color: rgba(0,153,204,1);
+    color: white;
+    box-shadow: 0px 2px 4px gray;
 }
 
 .news {
