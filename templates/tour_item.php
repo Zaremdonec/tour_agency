@@ -1,3 +1,11 @@
+<?php
+include("header.php");
+require("../classes/Excursion.php");
+$tour = new Excursion();
+if(isset($_GET['id'])) {
+    $tour = Excursion::getById($_GET['id']);
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,14 +15,6 @@
 </head>
 <body>
 	<div class="main_wraper">
-		<?php
-        include("header.php");
-        require("../classes/Excursion.php");
-        $tour = new Excursion();
-        if(isset($_GET['id'])) {
-            $tour = Excursion::getById($_GET['id']);
-        }
-		?>
         <div class="wrap">
             <div class="tour_item">
                 <h1>
