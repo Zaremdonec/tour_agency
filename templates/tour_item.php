@@ -3,8 +3,14 @@ include("header.php");
 require("../classes/Excursion.php");
 $tour = new Excursion();
 if(isset($_GET['id'])) {
-    $tour = Excursion::getById($_GET['id']);
+    $tour_id = $_GET['id'];
+    $tour = Excursion::getById($tour_id);
+    if(isset($_POST['post-btn'])) {
+        $comment = new Comment($_POST['author'], $_POST['text']);
+        $comment->attach($tour_id);
+    }
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,10 +49,10 @@ if(isset($_GET['id'])) {
                 <div class="leave-comment">
                     <form method="post" action="tour_item.php">
                         <label for="input1">Ім'я:</label>
-                        <input id='input1' class="input">
+                        <input id='input1' name="author" class="input">
                         <label for="text1">Коментар:</label>
-                        <textarea id="text1" class="input"></textarea>
-                        <input class="btn" type="button" name="post-button" value="Опублікувати">
+                        <textarea id="text1" name="text" class="input"></textarea>
+                        <input class="btn" type="button" name="post-btn" value="Опублікувати">
                     </form>
                 </div>
             </div>
