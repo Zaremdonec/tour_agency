@@ -155,14 +155,12 @@ body {
 }
 
 .image p{
-	position: absolute;
-	color: white;
-	margin-top: -23px;
-	margin-left: 120px;
-	padding-right: 30px;
-	padding-left: 5px;
-	background-color: rgba(0,153,204,0.8);
-	width: 45px;
+    position: absolute;
+    color: white;
+    margin-top: -23px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgba(0,153,204,0.8);
 }
 
 .title {
