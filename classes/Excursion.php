@@ -81,11 +81,16 @@ class Excursion
 	}
 
 
-	public function addTour($category_id, $title, $descr, $date, $image_path){
-		$target_dir = "../images/";
-        $target_file = $target_dir . $image_path;
-        copy($_FILES["fileToUpload"]["tmp_name"], $target_file);
-		$command = "INSERT INTO tours(category_id, title, descr, `date`, picture_path) VALUES ('".$category_id."','".$title."','".$descr."','".$date."','".'../images/'.$image_path."')";
+	public function addTour($category_id, $title, $descr, $date, $image_path)
+	{
+		if (empty($image_path)) {
+            $target_file = "../images/blank_img.png";
+        } else {
+            $target_dir = "../images/";
+            $target_file = $target_dir . $image_path;
+           copy($_FILES["fileToUpload"]["tmp_name"], $target_file);
+        }
+		$command = "INSERT INTO tours(category_id, title, descr, `date`, picture_path) VALUES ('".$category_id."','".$title."','".$descr."','".$date."','".$target_file."')";
 		$queryResult = $this->db->query($command);
 	}
 	
