@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div class="main_wraper">
+
         <?php
         include("header.php");
         require_once("../classes/Excursion.php");
