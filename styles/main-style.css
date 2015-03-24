@@ -22,7 +22,8 @@ body {
 	margin-bottom: 15px;
 	padding-bottom: 10px;
 	padding-top: 10px; 
-	background-color: rgba(0,153,204,0.8);
+	/*background-color: rgba(0,153,204,0.8);*/
+	background-color: red;
 	border-radius: 8px;
 }
 
