@@ -33,7 +33,6 @@ $excursion = new Excursion();
 <script>
     $(function () {
         $("#cities li a").on('click', function() {
-            console.log($(this).data("id"));
             var id = $(this).data("id");
             $.ajax({
                 url: "php/tour_list.php?city=" + id,
