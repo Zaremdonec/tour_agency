@@ -6,7 +6,9 @@
  * Time: 1:36
  */
 require_once 'Database.php';
-class Comment {
+
+class Comment
+{
     private $author;
     private $text;
     private $time;
@@ -33,7 +35,7 @@ class Comment {
     {
         $command = "SELECT * FROM comments WHERE tour_id=$tour_id;";
         $result = Database::getInstance()->query($command);
-        while($row = mysqli_fetch_array($result)) {
+        while ($row = mysqli_fetch_array($result)) {
             $author = $row['author'];
             $text = $row['text'];
             $time = $row['datetime'];
