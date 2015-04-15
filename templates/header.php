@@ -1,6 +1,6 @@
 <div class="header">
 	<div class="logo">
-		<span>Туристичне агенство "Павлуша"</span>
+		<span>Tour agency</span>
 		<p>Відпочинок на побережжі моря</p>
 	</div>
 	<div class="menu">

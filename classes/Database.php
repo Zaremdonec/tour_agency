@@ -1,11 +1,13 @@
 <?php
+
 /**
  * Using
  * $db = Database::getInstance();
  * $command = "command text";
  * $result = $db->query($command);
  */
-class Database {
+class Database
+{
     protected static $_instance;
     private $_host = "localhost";
     private $_username = "root";
@@ -15,10 +17,9 @@ class Database {
 
     static public function getInstance()
     {
-        if(self::$_instance === null) {
+        if (self::$_instance === null) {
             self::$_instance = new self();
         }
-
         return self::$_instance;
     }
 
@@ -28,7 +29,9 @@ class Database {
             $this->_password, $this->_database) or die("Database connection error");
     }
 
-    private function __clone() { }
+    private function __clone()
+    {
+    }
 
     public function getConnection()
     {
@@ -40,5 +43,5 @@ class Database {
         return $this->getConnection()->query($command);
     }
 
-    
+
 }

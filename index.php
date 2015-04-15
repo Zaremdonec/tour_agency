@@ -3,7 +3,7 @@
 	$excursion = new Excursion();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
 	<title>Туристичне агенство "Павлуша"</title>
 	<link rel="stylesheet" href="styles/main-style.css" type="text/css">
